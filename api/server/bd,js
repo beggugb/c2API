@@ -1,0 +1,12 @@
+sequelize model:create --name Rol --attributes nombre:string
+sequelize model:create --name Rango --attributes nombre:string,filename:string,puntos:integer,las:integer,limite:integer
+sequelize model:create --name Modulo --attributes path:string,name:string,icon:string,component:string,layout:string,enabled:boolean,rolId:integer
+sequelize model:create --name Usuario --attributes nombres:string,username:string,password:string,filename:string,estado:string,email:string,telefono:string,vigencia:date,registrado:boolean,liderId:integer,nivel:integer,rangoId:integer
+sequelize model:create --name Contrato --attributes motivo:string,subTotal:decimal,totalSaldo:decimal,total:decimal,estado:string,fechaContrato:date,fechaVencimiento:date,usuarioId:integer
+sequelize model:create --name NotaCobranza --attributes nro:integer,tipo:string,montoTotal:decimal,pagoTotal:decimal,saldoTotal:decimal,fechaVencimiento:date,cuotas:integer,detalle:string,contratoId:integer
+sequelize model:create --name PlanPago --attributes cuota:integer,monto:decimal,estado:boolean,fechaPago:date,fechaPagado:date,mes:integer,gestion:integer,notaId:integer
+sequelize model:create --name Pago --attributes monto:decimal,estado:boolean,porcentaje:integer,sistema:decimal,total:decimal,contratoId:integer,usuarioId:integer
+sequelize model:create --name Billetera --attributes nroBilletera:integer,password:string,estado:boolean,recibido:decimal,cobrado:decimal,saldo:decimal,total:decimal,usuarioId:integer
+sequelize model:create --name Red --attributes raiz:integer,origen:integer,patrocinador:integer,enabled:boolean,usuarioId:integer,patrocinadorId:integer,nro:integer
+
+
